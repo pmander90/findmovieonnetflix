@@ -1,0 +1,14 @@
+ <% if @pick.errors.any? %>
+ 	<ul>
+ 		<% @pick.errors.full_messages.each do |err| %>
+ 			<li><%= err %></li>
+ 		<%end%>
+ 	</ul>
+ <%end%>
+
+ <%= form_for @pick do |f| %>
+   <%= f.label :past, 'Movie Title' %>
+   <%= f.text_field :past %>
+
+   <%= f.submit %>
+ <% end %>
